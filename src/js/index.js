@@ -14,7 +14,7 @@ class Index extends React.Component{
     }
 }
 
-// 入口的定义
+// 入口的定义格式 ReactDOM.render(<Index/>,document.getElementById("example"));
 ReactDOM.render(
     <Index/>,document.getElementById("example")
 );
