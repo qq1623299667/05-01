@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ComponentHeader from './components/ComponentHeader';
 import ComponentFooter from './components/ComponentFooter';
-import IndexBody from './components/IndexBody';
+import BodyIndex from './components/bodyIndex';
 
 class Index extends React.Component{
     render() {
@@ -18,7 +18,7 @@ class Index extends React.Component{
             // 组件的return 函数返回的html节点必须是一个
             <div>
                 {componentHeader}
-                <IndexBody/>
+                <BodyIndex/>
                 <ComponentFooter/>
             </div>
         );
