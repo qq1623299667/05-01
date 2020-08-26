@@ -2,3 +2,4 @@
 node_modules/
 src/bundle.js
 bundle.js
+package-lock.json
