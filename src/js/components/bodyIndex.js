@@ -2,6 +2,16 @@ import React from 'react';
 
 // 给外部使用的组件需要加上 export default
 export default class BodyIndex extends React.Component{
+    // 内置函数：页面将要加载
+    componentWillMount() {
+        console.log('BodyIndex - componentWillMount');
+    }
+
+    // 内置函数：页面已经加载
+    componentDidMount() {
+        console.log('BodyIndex - componentDidMount');
+    }
+
     render() {
         const userName = "Parry";
         const boolInput = true;

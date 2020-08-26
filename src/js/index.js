@@ -5,6 +5,19 @@ import ComponentFooter from './components/ComponentFooter';
 import BodyIndex from './components/bodyIndex';
 
 class Index extends React.Component{
+    // 最终的打印是：Index - componentWillMount BodyIndex - componentWillMount BodyIndex - componentDidMount Index - componentDidMount
+    // 通过上述的打印信息获取组件加载流程
+
+    // 内置函数：页面将要加载
+    componentWillMount() {
+        console.log('Index - componentWillMount');
+    }
+
+    // 内置函数：页面已经加载
+    componentDidMount() {
+        console.log('Index - componentDidMount');
+    }
+
     render() {
         /**
         *  组件化开发，把组件赋值给变量，动态加载dom
