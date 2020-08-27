@@ -1,21 +1,34 @@
 import React from 'react';
-
+import BodyChild from "./bodyChild";
 // 给外部使用的组件需要加上 export default
 export default class BodyIndex extends React.Component{
     constructor() {
         super();
-        this.state = {username:"parry",age:"20"};
+        this.state = {username:"parry",age:20};
     }
+
+    changeUserInfo(){
+        this.setState({age:50});
+    }
+
+    // 通过event事件的方式将子组件的变动传递到父组件
+    handleChildValueChange(event){
+        this.setState({age:event.target.value})
+    }
+
     render() {
-        setTimeout(()=>{
-            // state设置时通过类似json的格式赋值
-            this.setState({username:"shijia"});
-        },1000);
+        // setTimeout(()=>{
+        //     // state设置时通过类似json的格式赋值
+        //     this.setState({username:"shijia"});
+        // },1000);
         return (
             <div>
                 <h2>页面的主体内容</h2>
                 {/* state组件自身属性  prop组件接收外面传入的属性*/}
-                <p>{this.state.username} {this.state.age} {this.props.userId} {this.props.username}</p>
+                <p>{this.props.userId} {this.props.username}</p>
+                <p>{this.state.username} {this.state.age}</p>
+                <input type="button" value="提交" onClick={this.changeUserInfo.bind(this)}/>
+                <BodyChild handleChildValueChange={this.handleChildValueChange.bind(this)}/>
             </div>
         )
     }
