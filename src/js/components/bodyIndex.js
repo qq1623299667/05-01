@@ -25,7 +25,7 @@ export default class BodyIndex extends React.Component{
             <div>
                 <h2>页面的主体内容</h2>
                 {/* state组件自身属性  prop组件接收外面传入的属性*/}
-                <p>{this.props.userId} {this.props.username}</p>
+                <p>接收到的父页面的属性： userId: {this.props.userId} username: {this.props.username}</p>
                 <p>{this.state.username} {this.state.age}</p>
                 <input type="button" value="提交" onClick={this.changeUserInfo.bind(this)}/>
                 <BodyChild handleChildValueChange={this.handleChildValueChange.bind(this)}/>
@@ -33,3 +33,7 @@ export default class BodyIndex extends React.Component{
         )
     }
 }
+
+BodyIndex.propTypes ={
+    userId:React.PropTypes.number.isRequired
+};
