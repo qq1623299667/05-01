@@ -1,5 +1,9 @@
 import React from 'react';
 import BodyChild from "./bodyChild";
+
+const defaultProps = {
+  username:'默认用户名'
+};
 // 给外部使用的组件需要加上 export default
 export default class BodyIndex extends React.Component{
     constructor() {
@@ -37,3 +41,5 @@ export default class BodyIndex extends React.Component{
 BodyIndex.propTypes ={
     userId:React.PropTypes.number.isRequired
 };
+
+BodyIndex.defaultProps = defaultProps;
