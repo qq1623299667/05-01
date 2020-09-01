@@ -17,6 +17,7 @@
     "babelify": "^10.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-mixin": "^2.0.2",
     "webpack": "^4.44.1",
     "webpack-dev-server": "^3.11.0"
   },

@@ -1,7 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import BodyChild from "./bodyChild";
+import ReactMixin from 'react-mixin';
+import MixinLog from "./mixins";
 
 const defaultProps = {
   username:'默认用户名'
@@ -20,6 +21,8 @@ export default class BodyIndex extends React.Component{
         // ReactDOM.findDOMNode(mySubmitButton).style.color = 'red';
         // 第二种方式
         this.refs.submitButton.style.color = 'red';
+
+        MixinLog.log();
     }
 
     // 通过event事件的方式将子组件的变动传递到父组件
@@ -50,3 +53,4 @@ BodyIndex.propTypes ={
 };
 
 BodyIndex.defaultProps = defaultProps;
+ReactMixin(BodyIndex.prototype,MixinLog);
