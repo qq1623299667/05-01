@@ -4,6 +4,8 @@ import Header from './components/header';
 import Footer from './components/footer';
 import BodyIndex from './components/bodyIndex';
 
+import 'antd/dist/antd.css';
+
 class Index extends React.Component{
     // 最终的打印是：Index - componentWillMount BodyIndex - componentWillMount BodyIndex - componentDidMount Index - componentDidMount
     // 通过上述的打印信息获取组件加载流程

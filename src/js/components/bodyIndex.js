@@ -3,6 +3,7 @@ import React from 'react';
 import BodyChild from "./bodyChild";
 import ReactMixin from 'react-mixin';
 import MixinLog from "./mixins";
+import { Input } from 'antd';
 
 const defaultProps = {
   username:'默认用户名'
@@ -41,7 +42,8 @@ export default class BodyIndex extends React.Component{
                 {/* state组件自身属性  prop组件接收外面传入的属性*/}
                 <p>接收到的父页面的属性： userId: {this.props.userId} username: {this.props.username}</p>
                 <p>{this.state.username} {this.state.age}</p>
-                <input id="submitButton" ref="submitButton" type="button" value="提交" onClick={this.changeUserInfo.bind(this)}/>
+                <Input placeholder="Basic usage"/>
+                <Input id="submitButton" ref="submitButton" type="button" value="提交" onClick={this.changeUserInfo.bind(this)}/>
                 <BodyChild {...this.props} id={4} handleChildValueChange={this.handleChildValueChange.bind(this)}/>
             </div>
         )
