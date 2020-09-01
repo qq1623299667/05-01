@@ -16,8 +16,10 @@ export default class BodyIndex extends React.Component{
     changeUserInfo(){
         this.setState({age:50});
         // 第一种方式
-        var mySubmitButton = document.getElementById('submitButton');
-        ReactDOM.findDOMNode(mySubmitButton).style.color = 'red';
+        // var mySubmitButton = document.getElementById('submitButton');
+        // ReactDOM.findDOMNode(mySubmitButton).style.color = 'red';
+        // 第二种方式
+        this.refs.submitButton.style.color = 'red';
     }
 
     // 通过event事件的方式将子组件的变动传递到父组件
@@ -36,7 +38,7 @@ export default class BodyIndex extends React.Component{
                 {/* state组件自身属性  prop组件接收外面传入的属性*/}
                 <p>接收到的父页面的属性： userId: {this.props.userId} username: {this.props.username}</p>
                 <p>{this.state.username} {this.state.age}</p>
-                <input id="submitButton" type="button" value="提交" onClick={this.changeUserInfo.bind(this)}/>
+                <input id="submitButton" ref="submitButton" type="button" value="提交" onClick={this.changeUserInfo.bind(this)}/>
                 <BodyChild {...this.props} id={4} handleChildValueChange={this.handleChildValueChange.bind(this)}/>
             </div>
         )
