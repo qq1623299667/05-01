@@ -1,5 +1,5 @@
 import React from 'react';
-// const footerCss = require("../../css/footer.css");
+// const footerCss = require("../../css/footer.css"); //模块化导入css的方法
 
 // 给外部使用的组件需要加上 export default
 export default class Footer extends React.Component{
