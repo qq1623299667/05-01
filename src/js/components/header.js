@@ -18,7 +18,7 @@ export default class Header extends React.Component{
             header:{
                 backgroundColor:"#333333", // react中的css的样式
                 color:"#FFFFFF",
-                "padding-top":this.state.miniHeader?"3px":"15px",  // 原生css的样式
+                paddingTop:this.state.miniHeader?"3px":"15px",  // 原生css的样式
                 paddingBottom:this.state.miniHeader?"3px":"15px"
             },
             // 还可以定义其他的样式
