@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ComponentHeader from './components/ComponentHeader';
-import ComponentFooter from './components/ComponentFooter';
+import Header from './components/header';
+import Footer from './components/footer';
 import BodyIndex from './components/bodyIndex';
 
 class Index extends React.Component{
@@ -26,13 +26,13 @@ class Index extends React.Component{
         * @author 石佳
         * @since 2020/8/26
         */
-        const componentHeader = <ComponentHeader/>;
+        const componentHeader = <Header/>;
         return (
             // 组件的return 函数返回的html节点必须是一个
             <div>
                 {componentHeader}
                 <BodyIndex userId={123} />
-                <ComponentFooter/>
+                <Footer/>
             </div>
         );
     }
