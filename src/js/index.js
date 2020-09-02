@@ -33,7 +33,8 @@ export default class Index extends React.Component{
             // 组件的return 函数返回的html节点必须是一个
             <div>
                 {componentHeader}
-                <BodyIndex userId={123} />
+                <BodyIndex userId={123} username={"parry1"}/>
+                <div>{this.props.children}</div>
                 <Footer/>
             </div>
         );
