@@ -16,7 +16,7 @@ export default class Root extends React.Component{
                     {/*访问/details可以查看首页里面嵌套的页面*/}
                     <Route component={ComponentDetails} path="/details"></Route>
                 </Route>
-                <Route component={ComponentList} path="/list"></Route>
+                <Route component={ComponentList} path="/list/:id"></Route>
             </Router>
         );
     };

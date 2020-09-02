@@ -32,7 +32,7 @@ export default class Header extends React.Component{
                     {/*react用link做标签跳转*/}
                     <li><Link to={`/`}>首页</Link></li>
                     <li><Link to={`/details`}>嵌套的详情页</Link></li>
-                    <li><Link to={`/list`}>列表页面</Link></li>
+                    <li><Link to={`/list/1234`}>列表页面</Link></li>
                 </ul>
             </header>
         )
