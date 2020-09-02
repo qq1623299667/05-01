@@ -6,7 +6,7 @@ import BodyIndex from './components/bodyIndex';
 
 import 'antd/dist/antd.css';
 
-class Index extends React.Component{
+export default class Index extends React.Component{
     // 最终的打印是：Index - componentWillMount BodyIndex - componentWillMount BodyIndex - componentDidMount Index - componentDidMount
     // 通过上述的打印信息获取组件加载流程
 
@@ -39,8 +39,3 @@ class Index extends React.Component{
         );
     }
 }
-
-// 入口的定义格式 ReactDOM.render(<Index/>,document.getElementById("example"));
-ReactDOM.render(
-    <Index/>,document.getElementById("example")
-);
